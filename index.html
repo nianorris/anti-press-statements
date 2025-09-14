@@ -13,18 +13,23 @@
   </header>
 
   <section>
-    <h2>Frequency of Anti-Press Posts Over Time</h2>
+    <h2>Frequency of Anti-Press Posts to Truth Social</h2>
     <label for="monthSelect">Select a Month: </label>
     <select id="monthSelect">
       <option value="all">All Months</option>
     </select>
     <canvas id="frequencyChart"></canvas>
+    <div id="quotesContainer" style="margin-top:20px; padding:10px; border:1px solid #ccc;">
+        <h3>Quotes</h3>
+        <ul id="quotesList"></ul>
+      </div>    
   </section>
 
   <section>
     <h2>Most Targeted Media Outlets</h2>
     <canvas id="outletChart"></canvas>
   </section>
+
 
   <footer>
     <p>Dataset: Portfolio demonstration purposes</p>
