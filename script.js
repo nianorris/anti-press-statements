@@ -83,11 +83,12 @@ Papa.parse(csvUrl, {
               li.style.listStyle = 'none';
 
               let content = '';
-              if (row.Link) content += `<div><a href="${row.Link}" target="_blank">View Source</a></div>`;
-              if (row.Date) content += `<div><strong>Date:</strong> ${new Date(row.Date).toLocaleDateString()}</div>`;
-              if (row.Type) content += `<div><strong>Type:</strong> ${row.Type}</div>`;
-              if (row.Quote) content += `<div><strong>Content:</strong> ${row.Quote}</div>`;
-              if (row.Tags) content += `<div><strong>Tags:</strong> ${row.Tags}</div>`;
+                if (row.Link) content += `<div><a href="${row.Link}" target="_blank">View Source</a></div>`;
+                if (row.Date) content += `<div><strong>Date:</strong> ${new Date(row.Date).toLocaleDateString()}</div>`;
+                if (row.Type) content += `<div><strong>Type:</strong> ${row.Type}</div>`;
+                if (row.Content) content += `<div><strong>Content:</strong> ${row.Content}</div>`; // New Content column
+                if (row.Quote) content += `<div><strong>Quote:</strong> ${row.Quote}</div>`;
+                if (row.Tags) content += `<div><strong>Tags:</strong> ${row.Tags}</div>`;
 
               li.innerHTML = content;
               quotesList.appendChild(li);
