@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti-Press Social Media Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tracking Anti-Press Messaging on Social Media</h1>
+    <p>This visualization shows frequency of posts over time and which media outlets were targeted.</p>
+  </header>
+
+  <section>
+    <h2>Frequency of Anti-Press Posts Over Time</h2>
+    <label for="monthSelect">Select a Month: </label>
+    <select id="monthSelect">
+      <option value="all">All Months</option>
+    </select>
+    <canvas id="frequencyChart"></canvas>
+  </section>
+
+  <section>
+    <h2>Most Targeted Media Outlets</h2>
+    <canvas id="outletChart"></canvas>
+  </section>
+
+  <footer>
+    <p>Dataset: Portfolio demonstration purposes</p>
+  </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  
+    <!-- Your script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
