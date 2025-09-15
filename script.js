@@ -1,9 +1,12 @@
 
 const truthSocialCSVUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3H1oRfz6oAreLUaEs48mUaz4VcGz2WLD-ge4S2Mg2TgoaIikAIzDeDgkAqVU-tOu7-kXSbj7E5a0P/pub?gid=201966548&single=true&output=csv';
-const twitterCSVUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3H1oRfz6oAreLUaEs48mUaz4VcGz2WLD-ge4S2Mg2TgoaIikAIzDeDgkAqVU-tOu7-kXSbj7E5a0P/pub?gid=0&single=true&output=csv';
+const twitterCSVUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTRo7v4E-ekiOUKFLj4DecdIX4fxwT4QYHEhzKIaZYDNNQ6AtIoyPhwwHsC12mn_4Wd9fJpRX3VSQyu/pub?gid=0&single=true&output=csv';
+const [month, day, year] = row.Date.split('/');
+const date = new Date(`${year}-${month}-${day}`);
 
 let allData = [];
 let yearlyData = {};
+let frequencyChart;
 
 function parseCSV(url, platform, callback) {
   Papa.parse(url, {
